@@ -1,0 +1,22 @@
+.dropzone {
+    border: 2px dashed #bbb;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .dropzone p {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .dropzone ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .dropzone ul li {
+    margin-bottom: 5px;
+  }
+  

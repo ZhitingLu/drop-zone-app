@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from './Login';
-import DropZone from './DropZone';
+import Login from './components/Login';
+import DropZone from './components/DropZone';
 
 const App = () => {
   const handleLoginSuccess = (response) => {
