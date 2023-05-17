@@ -4,9 +4,6 @@ import { useDropzone } from 'react-dropzone';
 const DropZone = () => {
   const { getRootProps, getInputProps, acceptedFiles } = useDropzone();
 
-const DropZone = () => {
-  const { getRootProps, getInputProps, acceptedFiles } = useDropzone();
-
   return (
     <div {...getRootProps()} className="dropzone">
       <input {...getInputProps()} />
@@ -31,8 +28,5 @@ const DropZone = () => {
     </div>
   );
 };
-
-export default DropZone;
-
 
 export default DropZone;

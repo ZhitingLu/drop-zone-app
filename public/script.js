@@ -1,5 +1,6 @@
 const dropzone = document.getElementById('dropzone');
 const fileList = document.getElementById('file-list');
+const fileInput = document.getElementById('file-input');
 
 dropzone.addEventListener('dragover', (e) => {
   e.preventDefault();
