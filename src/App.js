@@ -15,7 +15,8 @@ const App = () => {
 
   return (
     <div>
-      <h1>Drop Zone App</h1>
+      <h1>Drop Zone App</h1> 
+      <div id="google-signin-button"></div>
       <Login onLoginSuccess={handleLoginSuccess} onLoginFailure={handleLoginFailure} />
       <DropZone />
     </div>

@@ -1,9 +1,6 @@
-import React from 'react';
-import { GoogleLogin } from 'react-google-login';
+import React, { useEffect } from 'react';
 
 const Login = ({ onLoginSuccess, onLoginFailure }) => {
-  const clientId = process.env.REACT_APP_GOOGLE_CLIENT_TOKEN; 
-
   const handleLoginSuccess = (response) => {
     // Handle successful login
     onLoginSuccess(response);
@@ -14,14 +11,17 @@ const Login = ({ onLoginSuccess, onLoginFailure }) => {
     onLoginFailure(error);
   };
 
+  useEffect(() => {
+    // Initialize Google Sign-In client
+    window.google.accounts.id.initialize({
+      client_id: process.env.REACT_APP_GOOGLE_CLIENT_TOKEN,
+      callback: handleLoginSuccess,
+      cancel_callback: handleLoginFailure,
+    });
+  }, []);
+
   return (
-    <GoogleLogin
-      clientId={clientId}
-      buttonText="Login with Google"
-      onSuccess={handleLoginSuccess}
-      onFailure={handleLoginFailure}
-      cookiePolicy="single_host_origin"
-    />
+    <div id="google-signin-button">Sign in with Google</div>
   );
 };
 
