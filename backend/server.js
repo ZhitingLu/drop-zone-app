@@ -136,17 +136,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-// Route for initiating Google OAuth flow
-app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
-
-// Route for handling Google OAuth callback
-app.get(
-    '/auth/google/callback',
-    passport.authenticate('google', {
-        successRedirect: '/dashboard',
-        failureRedirect: '/login',
-    })
-);
 
 // Start the server
 const port = process.env.PORT || 3001; // Use the environment port if available
